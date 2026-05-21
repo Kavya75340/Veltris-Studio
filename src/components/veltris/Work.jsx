@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Agar package.json mein 'motion/react' hai toh wahi rehne dein
-import { SectionHeader } from "./Section";
+import { motion, AnimatePresence } from "framer-motion";
+import SectionHeader from "./Section";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [

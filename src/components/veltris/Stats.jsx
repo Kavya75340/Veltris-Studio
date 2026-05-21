@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const stats = [
     { label: "Projects Delivered", value: "180+", meta: "web · video · brand" },

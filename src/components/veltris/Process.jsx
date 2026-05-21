@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import { SectionHeader } from "./Section";
+import SectionHeader from "./Section";
 import { Binary, Compass, Cpu, Layers, Radio, Terminal } from "lucide-react";
 
 const steps = [

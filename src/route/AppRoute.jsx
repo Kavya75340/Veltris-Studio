@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Index } from "./Index"; // Ensure path is correct
+import Index from "./Index";
 
 const AppRoute = () => {
     return (

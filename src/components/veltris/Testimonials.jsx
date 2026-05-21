@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
-import { SectionHeader } from "./Section";
+import { motion } from "framer-motion";
+import SectionHeader from "./Section";
 
 const items = [
     {

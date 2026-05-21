@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
     ShoppingBag,
     GraduationCap,
@@ -20,7 +20,7 @@ import {
     Zap,
     CircleDollarSign,
 } from "lucide-react";
-import { SectionHeader } from "./Section";
+import SectionHeader from "./Section";
 
 const packagesData = [
     // --- CATEGORY 1: COMMERCIAL & SCALE ---

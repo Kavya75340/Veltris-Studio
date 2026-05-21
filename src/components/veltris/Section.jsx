@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function SectionHeader({ eyebrow, title, subtitle, id }) {
     return (

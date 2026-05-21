@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import {
     Code,
     LayoutDashboard,
@@ -11,7 +11,7 @@ import {
     TrendingUp,
     Compass,
 } from "lucide-react";
-import { SectionHeader } from "./Section";
+import SectionHeader from "./Section";
 
 const services = [
     {

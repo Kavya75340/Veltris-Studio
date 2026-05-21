@@ -134,7 +134,7 @@ const divisions = [
     },
 ];
 
-export default default function StudioStructure() {
+export default function StudioStructure() {
     const [flippedCards, setFlippedCards] = useState({});
 
     const handleFlip = (index) => {
