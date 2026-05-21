@@ -1,3 +1,4 @@
+import React from "react";
 import Nav from "../components/veltris/Nav";
 import Hero from "../components/veltris/Hero";
 import Stats from "../components/veltris/Stats";
