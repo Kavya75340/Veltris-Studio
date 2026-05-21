@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export function CTA() {
+export default function CTA() {
     return (
         <section id="contact" className="relative py-32 overflow-hidden">
             <div className="absolute inset-0 -z-10 bg-grid bg-grid-fade opacity-50" />

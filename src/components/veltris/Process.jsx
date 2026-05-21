@@ -60,7 +60,7 @@ const steps = [
     },
 ];
 
-export function Process() {
+export default function Process() {
     const containerRef = useRef(null);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 

@@ -97,7 +97,7 @@ const categories = [
     "Brand Experience",
 ];
 
-export function Work() {
+export default function Work() {
     const [active, setActive] = useState("All Work");
 
     const filtered =

@@ -312,7 +312,7 @@ const categories = [
     "Identity & Launch",
 ];
 
-export function Industries() {
+export default function Industries() {
     const [activeId, setActiveId] = useState("pkg-01");
     const activeData =
         packagesData.find((p) => p.id === activeId) || packagesData[0];

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export function SectionHeader({ eyebrow, title, subtitle, id }) {
+export default function SectionHeader({ eyebrow, title, subtitle, id }) {
     return (
         <div id={id} className="mx-auto max-w-3xl text-center mb-16">
             <motion.div

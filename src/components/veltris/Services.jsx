@@ -66,7 +66,7 @@ const services = [
     },
 ];
 
-export function Services() {
+export default function Services() {
     return (
         <section id="services" className="relative py-28">
             <div className="mx-auto max-w-7xl px-6">

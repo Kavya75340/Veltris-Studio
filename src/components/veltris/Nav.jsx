@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export function Nav() {
+export default function Nav() {
     const items = [
         "Studio",
         "Divisions",

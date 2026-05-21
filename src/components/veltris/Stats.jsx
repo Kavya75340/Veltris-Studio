@@ -13,7 +13,7 @@ const stats = [
     { label: "Client Satisfaction", value: "98%", meta: "renewal score" },
 ];
 
-export function Stats() {
+export default function Stats() {
     return (
         <section className="relative py-24 md:py-28">
             <div className="mx-auto max-w-7xl px-6">

@@ -19,7 +19,7 @@ const items = [
     },
 ];
 
-export function Testimonials() {
+export default function Testimonials() {
     return (
         <section className="relative py-28">
             <div className="mx-auto max-w-7xl px-6">
