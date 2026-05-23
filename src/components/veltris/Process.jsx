@@ -38,12 +38,12 @@ const steps = [
     {
         n: "04",
         t: "Development",
-        d: "Engineering with edge-native infrastructure.",
+        d: "Scalable product engineering.",
         icon: Terminal,
-        color: "from-purple-500 to-fuchsia-500",
-        shadow: "shadow-purple-500/10",
-        glow: "bg-purple-500/20",
-        accent: "text-purple-400",
+        color: "from-violet-500 to-fuchsia-500",
+        shadow: "shadow-violet-500/10",
+        glow: "bg-violet-500/20",
+        accent: "text-violet-400",
     },
     {
         n: "05",
@@ -109,11 +109,17 @@ export default function Process() {
                     className="relative mt-16 md:mt-24 lg:mt-32"
                 >
                     {/* --- 1. DESKTOP ONLY PIPELINE TRACKER --- */}
-                    <div className="absolute left-[8.33%] right-[8.33%] top-6 h-[2px] bg-slate-950 hidden lg:block rounded-full -z-20 border border-slate-900/50">
+                    <div className="absolute left-[8.33%] right-[8.33%] top-6 h-[2px] hidden lg:block rounded-full -z-20 overflow-hidden">
+                        {/* Base visible line */}
+                        <div className="absolute inset-0 bg-slate-700/60 rounded-full" />
+
+                        {/* Scroll progress line */}
                         <motion.div
                             style={{ scaleX: scaleLine }}
-                            className="absolute inset-y-0 left-0 bg-gradient-to-r from-cyan-500 via-indigo-500 via-fuchsia-500 to-rose-500 origin-left"
+                            className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 via-fuchsia-500 to-rose-500 origin-left shadow-[0_0_20px_rgba(168,85,247,0.7)]"
                         />
+
+                        {/* Hover animated line */}
                         <motion.div
                             animate={{ width: hoverWidth }}
                             transition={{
@@ -121,16 +127,29 @@ export default function Process() {
                                 stiffness: 90,
                                 damping: 16,
                             }}
-                            className="absolute inset-y-0 left-0 bg-gradient-to-r from-cyan-500 via-indigo-500 via-fuchsia-500 to-rose-500 origin-left shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+                            className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 via-fuchsia-500 to-rose-500 shadow-[0_0_25px_rgba(236,72,153,0.6)]"
                         />
                     </div>
 
                     {/* --- 2. MOBILE ONLY CENTER/BACKGROUND TRACKER --- */}
-                    <div className="absolute left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 top-2 bottom-2 w-[2px] bg-slate-950/80 block lg:hidden rounded-full -z-20 border border-slate-900/50">
+                    <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 top-0 bottom-0 w-[3px] block lg:hidden z-[1]">
+                        {/* Base Line */}
+                        <div className="absolute inset-0 rounded-full bg-slate-700/40" />
+
+                        {/* Animated Gradient Progress */}
                         <motion.div
                             style={{ scaleY: scaleLine }}
-                            className="absolute inset-x-0 top-0 bg-gradient-to-b from-cyan-500 via-blue-500 via-purple-500 via-rose-500 to-cyan-500 origin-top"
+                            className="absolute top-0 left-0 w-full h-full origin-top rounded-full
+                            bg-gradient-to-b
+                            from-cyan-400
+                            via-blue-500
+                            via-purple-500
+                            to-rose-500
+                            shadow-[0_0_18px_rgba(168,85,247,0.65)]"
                         />
+
+                        {/* Extra Glow Layer */}
+                        <div className="absolute inset-0 rounded-full blur-[6px] opacity-40 bg-gradient-to-b from-cyan-500 via-indigo-500 to-rose-500" />
                     </div>
 
                     {/* Process Content Grid Matrix */}
@@ -155,7 +174,7 @@ export default function Process() {
                                     onMouseLeave={() => setHoveredIndex(null)}
                                     onTouchStart={() => setHoveredIndex(i)}
                                     onTouchEnd={() => setHoveredIndex(null)}
-                                    className="relative group cursor-pointer flex flex-col w-full"
+                                    className="relative group cursor-pointer flex flex-col w-full pl-10 sm:pl-0"
                                 >
                                     {/* DESKTOP ONLY TIMELINE NODE */}
                                     <div className="relative hidden lg:flex items-center justify-center mb-6 z-30">
@@ -181,10 +200,7 @@ export default function Process() {
                                     </div>
 
                                     {/* MOBILE EXTRA-PREMIUM ADAPTIVE CARD */}
-                                    <div
-                                        className={`w-full rounded-2xl border bg-slate-950/60 p-6 backdrop-blur-md relative overflow-hidden transition-all duration-500 flex flex-col justify-between min-h-[210px] sm:min-h-[190px] lg:min-h-[180px] z-10
-                                            `}
-                                    >
+                                    <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-950/60 p-6 backdrop-blur-md relative overflow-hidden transition-all duration-500 flex flex-col justify-between min-h-[210px] sm:min-h-[190px] lg:min-h-[180px] z-10 hover:border-slate-700/80 hover:bg-slate-900/70">
                                         {/* --- FIX: Premium Top Accent Gradient Border System --- */}
                                         <div className="absolute top-0 inset-x-0 h-[2px] bg-slate-900 z-20">
                                             <div
