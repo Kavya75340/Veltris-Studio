@@ -57,42 +57,132 @@ export default function Nav() {
                 {/* BRAND LOGO AREA */}
                 <motion.a
                     href="#"
-                    className="flex items-center gap-3 sm:gap-4 group relative"
+                    className="flex items-center gap-3 sm:gap-4 group relative select-none w-full sm:w-auto"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                    {/* Dynamic Interactive Icon Engine */}
-                    <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center flex-shrink-0">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#4F46E5] via-[#3B82F6] to-[#06B6D4] rounded-2xl opacity-25 blur-md group-hover:opacity-60 group-hover:scale-125 transition-all duration-500 ease-out" />
-                        <div className="absolute inset-0 rounded-2xl border border-white/[0.05] group-hover:border-[#06B6D4]/40 group-hover:rotate-45 transition-all duration-500 ease-out" />
-                        <div className="relative w-8.5 h-8.5 sm:w-9.5 sm:h-9.5 rounded-[14px] bg-[#0D1321] border border-white/[0.08] group-hover:border-white/[0.15] flex items-center justify-center shadow-2xl transition-all duration-300 shadow-black/80">
-                            <div className="relative w-3.5 h-3.5 sm:w-4 sm:h-4 flex items-center justify-center">
-                                <span className="absolute left-0 top-0 w-1 sm:w-1.5 h-3 sm:h-3.5 bg-gradient-to-b from-[#4F46E5] to-[#3B82F6] rounded-full transform -rotate-[28deg] origin-bottom-left transition-transform duration-300 group-hover:scale-y-110" />
-                                <span className="absolute right-0 top-0 w-1 sm:w-1.5 h-3 sm:h-3.5 bg-gradient-to-b from-[#06B6D4] to-[#3B82F6] rounded-full transform rotate-[28deg] origin-bottom-right transition-transform duration-300 group-hover:scale-y-110" />
-                                <span className="absolute bottom-[1px] w-1 h-1 bg-white rounded-full animate-pulse opacity-80" />
-                            </div>
-                        </div>
+                    {/* Logo Image Block */}
+                    <div className="flex flex-col justify-center flex-shrink-0">
+                        {/* Desktop Logo (/icon.png) - hidden on mobile, visible on md and up */}
+                        <img
+                            src="/icon.png"
+                            alt="Veltris Desktop Icon"
+                            className="hidden md:block h-20 w-auto object-contain"
+                        />
+                        {/* Mobile Logo (/logo2.png) - visible on mobile, hidden on md and up */}
+                        <img
+                            src="/logo2.png"
+                            alt="Veltris Mobile Icon"
+                            className="block md:hidden h-10 w-auto object-contain"
+                        />
                     </div>
 
-                    {/* Luxury Brand Typography Block */}
-                    <div className="flex flex-col justify-center">
-                        <div className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center leading-none">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#E2E8F0] group-hover:to-[#06B6D4] transition-all duration-500">
-                                Veltris
-                            </span>
-                            <motion.span
-                                animate={{ scale: [1, 1.2, 1] }}
+                    {/* Premium Typography Block - Removed 'hidden md:flex' so text stays visible everywhere */}
+                    <div className="hidden md:flex flex-col justify-center leading-none group min-w-0">
+                        {/* Main Brand Name */}
+                        <div className="flex items-center">
+                            <h1
+                                className="
+                            text-[22px]       {/* Responsive mobile sizing */}
+                            sm:text-3xl       {/* Your exact desktop size */}
+                            font-black
+                            uppercase
+                            text-transparent
+                            bg-clip-text
+                            bg-gradient-to-r
+                            from-white
+                            via-slate-100
+                            to-slate-300
+                            drop-shadow-[0_0_18px_rgba(255,255,255,0.08)]
+                            transition-all
+                            duration-500
+                            group-hover:from-white
+                            group-hover:via-cyan-100
+                            group-hover:to-cyan-400
+                        "
+                                style={{
+                                    letterSpacing: "0.58em",
+                                    marginRight: "-0.58em", // Keeps it centered with huge letter-spacing
+                                }}
+                            >
+                                VELTRIS
+                            </h1>
+                        </div>
+
+                        {/* Studios Line */}
+                        <div className="flex items-center gap-1.5 sm:gap-3 mx-0 sm:mx-2 mt-1 sm:mt-0">
+                            {/* Animated Glow Dot (Left) */}
+                            <motion.div
+                                animate={{
+                                    opacity: [0.5, 1, 0.5],
+                                    scale: [1, 1.25, 1],
+                                }}
                                 transition={{
                                     repeat: Infinity,
                                     duration: 2,
                                     ease: "easeInOut",
                                 }}
-                                className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] ml-1 shadow-[0_0_10px_#06B6D4]"
+                                className="m-0.5 sm:m-1 w-1 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_14px_#22D3EE] flex-shrink-0"
+                            />
+
+                            {/* Left Line */}
+                            <div className="h-[1px] flex-grow sm:flex-initial sm:w-10 bg-gradient-to-r from-transparent to-cyan-400 opacity-70" />
+
+                            {/* STUDIOS Text */}
+                            <span
+                                className="
+                            text-[8px]
+                            font-bold
+                            uppercase
+                            text-cyan-400
+                            transition-all
+                            duration-300
+                            group-hover:text-cyan-300
+                            flex-shrink-0
+                        "
+                                style={{
+                                    letterSpacing: "0.55em",
+                                    marginRight: "-0.55em",
+                                }}
+                            >
+                                STUDIOS
+                            </span>
+
+                            {/* Right Line */}
+                            <div className="h-[1px] flex-grow sm:flex-initial sm:w-10 bg-gradient-to-l from-transparent to-cyan-400 opacity-70" />
+
+                            {/* Animated Glow Dot (Right) */}
+                            <motion.div
+                                animate={{
+                                    opacity: [0.5, 1, 0.5],
+                                    scale: [1, 1.25, 1],
+                                }}
+                                transition={{
+                                    repeat: Infinity,
+                                    duration: 2,
+                                    ease: "easeInOut",
+                                }}
+                                className="m-0.5 sm:m-1 w-1 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_14px_#22D3EE] flex-shrink-0"
                             />
                         </div>
-                        <span className="text-[8.5px] sm:text-[9.5px] font-extrabold tracking-[0.32em] text-[#475569] uppercase mt-1 transition-all duration-300 group-hover:text-[#94A3B8] group-hover:tracking-[0.36em]">
-                            Studio
+
+                        {/* Tagline - Hidden on mobile, visible on desktop */}
+                        <span
+                            className="
+                        hidden sm:block
+                        mt-1
+                        font-extrabold
+                        text-[7px]
+                        uppercase
+                        tracking-[0.24em]
+                        text-slate-500
+                        group-hover:text-slate-400
+                        transition-all
+                        duration-300
+                    "
+                        >
+                            AI-POWERED EDITING & CREATIVE ENGINEERING
                         </span>
                     </div>
                 </motion.a>
