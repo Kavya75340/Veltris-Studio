@@ -53,7 +53,7 @@ export default function Nav() {
             className="fixed top-3 left-0 right-0 z-50 w-full px-4 sm:px-8 md:px-12 lg:px-20"
         >
             {/* Main Nav Capsule */}
-            <div className="glass rounded-full px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between relative z-50 border border-white/[0.08] backdrop-blur-md">
+            <div className="glass rounded-full px-4 sm:px-5 py-1 sm:py-1 flex items-center justify-between relative z-50 border border-white/[0.08] backdrop-blur-md">
                 {/* BRAND LOGO AREA */}
                 <motion.a
                     href="#"
@@ -62,85 +62,128 @@ export default function Nav() {
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                    {/* Logo Image Block */}
-                    <div className="flex flex-col justify-center flex-shrink-0">
-                        {/* Desktop Logo (/icon.png) - hidden on mobile, visible on md and up */}
-                        <img
+                    {/* Logo Image Block - Cleaned overflow to fix cut-off shadows */}
+                    <div className="flex flex-col justify-center flex-shrink-0 overflow-visible p-2">
+                        {/* Desktop Logo (/icon.png) - Premium Glow Effect */}
+                        <motion.img
+                            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: 0.1,
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                                rotate: 3,
+                                // Full wrap smooth balanced glow around the entire asset
+                                filter: "drop-shadow(0 0 20px rgba(34, 211, 238, 0.45)) drop-shadow(0 0 40px rgba(34, 211, 238, 0.15))",
+                            }}
                             src="/icon.png"
                             alt="Veltris Desktop Icon"
-                            className="hidden md:block h-20 w-auto object-contain"
+                            className="hidden md:block h-20 w-auto object-contain transition-all duration-300 dynamic-glow"
                         />
-                        {/* Mobile Logo (/logo2.png) - visible on mobile, hidden on md and up */}
-                        <img
+
+                        {/* Mobile Logo (/logo2.png) - Compact Entry Effect */}
+                        <motion.img
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: "easeOut",
+                            }}
                             src="/logo2.png"
                             alt="Veltris Mobile Icon"
-                            className="block md:hidden h-10 w-auto object-contain"
+                            className="block md:hidden h-12 w-auto object-contain"
                         />
                     </div>
 
-                    {/* Premium Typography Block - Removed 'hidden md:flex' so text stays visible everywhere */}
-                    <div className="hidden md:flex flex-col justify-center leading-none group min-w-0">
-                        {/* Main Brand Name */}
+                    {/* Premium Typography Block */}
+                    <div className="hidden md:flex flex-col justify-center leading-none group min-w-0 select-none">
+                        {/* Main Brand Name with Staggered Letter Animation */}
                         <div className="flex items-center">
                             <h1
                                 className="
-                            text-[22px]       {/* Responsive mobile sizing */}
-                            sm:text-3xl       {/* Your exact desktop size */}
-                            font-black
-                            uppercase
-                            text-transparent
-                            bg-clip-text
-                            bg-gradient-to-r
-                            from-white
-                            via-slate-100
-                            to-slate-300
-                            drop-shadow-[0_0_18px_rgba(255,255,255,0.08)]
-                            transition-all
-                            duration-500
-                            group-hover:from-white
-                            group-hover:via-cyan-100
-                            group-hover:to-cyan-400
-                        "
+                    text-[22px] sm:text-2xl 
+                    font-black
+                    uppercase
+                    text-transparent
+                    bg-clip-text
+                    bg-gradient-to-r
+                    from-white
+                    via-slate-100
+                    to-slate-300
+                    drop-shadow-[0_0_18px_rgba(255,255,255,0.08)]
+                    transition-all
+                    duration-500
+                    group-hover:from-white
+                    group-hover:via-cyan-100
+                    group-hover:to-cyan-400
+                    flex overflow-hidden py-1
+                "
                                 style={{
                                     letterSpacing: "0.58em",
-                                    marginRight: "-0.58em", // Keeps it centered with huge letter-spacing
+                                    marginRight: "-0.58em",
                                 }}
                             >
-                                VELTRIS
+                                {"VELTRIS".split("").map((letter, index) => (
+                                    <motion.span
+                                        key={index}
+                                        initial={{ y: "100%", opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            duration: 0.8,
+                                            ease: [0.16, 1, 0.3, 1],
+                                            delay: index * 0.06,
+                                        }}
+                                        className="inline-block"
+                                    >
+                                        {letter}
+                                    </motion.span>
+                                ))}
                             </h1>
                         </div>
 
-                        {/* Studios Line */}
-                        <div className="flex items-center gap-1.5 sm:gap-3 mx-0 sm:mx-2 mt-1 sm:mt-0">
+                        {/* Studios Line with Scale & Fade Expansion */}
+                        <motion.div
+                            initial={{ opacity: 0, scaleX: 0.6 }}
+                            animate={{ opacity: 1, scaleX: 1 }}
+                            transition={{
+                                duration: 1,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: 0.5,
+                            }}
+                            className="flex items-center gap-1.5 mx-3 origin-center"
+                        >
                             {/* Animated Glow Dot (Left) */}
                             <motion.div
                                 animate={{
                                     opacity: [0.5, 1, 0.5],
-                                    scale: [1, 1.25, 1],
+                                    scale: [1, 1.2, 1],
                                 }}
                                 transition={{
                                     repeat: Infinity,
                                     duration: 2,
                                     ease: "easeInOut",
                                 }}
-                                className="m-0.5 sm:m-1 w-1 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_14px_#22D3EE] flex-shrink-0"
+                                className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
                             />
 
                             {/* Left Line */}
-                            <div className="h-[1px] flex-grow sm:flex-initial sm:w-10 bg-gradient-to-r from-transparent to-cyan-400 opacity-70" />
+                            <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-cyan-400/50" />
 
                             {/* STUDIOS Text */}
                             <span
                                 className="
-                            text-[8px]
-                            font-bold
-                            uppercase
-                            text-cyan-400
-                            transition-all
-                            duration-300
-                            group-hover:text-cyan-300
-                            flex-shrink-0
-                        "
+                    text-[8px]
+                    font-bold
+                    uppercase
+                    text-cyan-400
+                    transition-all
+                    duration-300
+                    group-hover:text-cyan-300
+                    flex-shrink-0
+                "
                                 style={{
                                     letterSpacing: "0.55em",
                                     marginRight: "-0.55em",
@@ -150,40 +193,44 @@ export default function Nav() {
                             </span>
 
                             {/* Right Line */}
-                            <div className="h-[1px] flex-grow sm:flex-initial sm:w-10 bg-gradient-to-l from-transparent to-cyan-400 opacity-70" />
+                            <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-cyan-400/50" />
 
                             {/* Animated Glow Dot (Right) */}
                             <motion.div
                                 animate={{
                                     opacity: [0.5, 1, 0.5],
-                                    scale: [1, 1.25, 1],
+                                    scale: [1, 1.2, 1],
                                 }}
                                 transition={{
                                     repeat: Infinity,
                                     duration: 2,
                                     ease: "easeInOut",
+                                    delay: 1,
                                 }}
-                                className="m-0.5 sm:m-1 w-1 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_14px_#22D3EE] flex-shrink-0"
+                                className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
                             />
-                        </div>
+                        </motion.div>
 
-                        {/* Tagline - Hidden on mobile, visible on desktop */}
-                        <span
+                        {/* Tagline - Smooth Fade Slide */}
+                        <motion.span
+                            initial={{ opacity: 0, y: 5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
                             className="
-                        hidden sm:block
-                        mt-1
-                        font-extrabold
-                        text-[7px]
-                        uppercase
-                        tracking-[0.24em]
-                        text-slate-500
-                        group-hover:text-slate-400
-                        transition-all
-                        duration-300
-                    "
+                hidden sm:block
+                mt-1.5
+                font-extrabold
+                text-[7px]
+                uppercase
+                tracking-[0.24em]
+                text-slate-500
+                group-hover:text-slate-400
+                transition-all
+                duration-300
+            "
                         >
                             AI-POWERED EDITING & CREATIVE ENGINEERING
-                        </span>
+                        </motion.span>
                     </div>
                 </motion.a>
 
