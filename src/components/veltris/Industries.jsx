@@ -538,259 +538,305 @@ import {
 const iconMap = { ShoppingBag, GraduationCap, Home, Mic, UserCheck, Layers };
 
 const categories = [
-    "All Systems",
-    "Commerce Infrastructure",
-    "Creator Growth Systems",
-    "Brand Identity & Launch",
+    "All Packages",
+    "Web Development",
+    "Content Production",
+    "Brand & Growth",
 ];
 
 const packagesData = [
     {
         id: "pkg-01",
-        category: "Commerce Infrastructure",
-        name: "Enterprise E-Commerce Engine",
+        category: "Web Development",
+        name: "E-Commerce Website System",
+
         tagline:
-            "High-conversion digital commerce ecosystems engineered for scalable growth.",
+            "Conversion-focused e-commerce platforms designed for scalable online sales and customer growth.",
+
         icon: "ShoppingBag",
+
         price: "Starting from ₹60k",
-        badge: "Revenue Acceleration System",
+
+        badge: "E-Commerce Development",
+
         accent: "rgb(6, 182, 212)",
+
         gradient: "from-cyan-500/10 via-transparent to-transparent",
 
         services: [
-            "Conversion-Optimized E-Commerce Website",
-            "Premium Product Experience Design",
-            "AI-Assisted Product Video Editing",
-            "High-CTR Product Showcase Reels",
-            "Strategic Brand Identity Development",
-            "Offer Banner & Campaign Creative Design",
-            "Multi-Platform Social Media Content",
-            "Sales-Focused Landing Page Systems",
-            "Smart WhatsApp Commerce Integration",
-            "Performance & Technical Maintenance Support",
+            "Custom E-Commerce Website",
+            "Premium Product Pages",
+            "Product Showcase Videos",
+            "Landing Page Design",
+            "Brand Visual Assets",
+            "Sales Banner Creatives",
+            "Social Media Content",
+            "WhatsApp Integration",
+            "Payment Gateway Setup",
+            "Website Maintenance",
         ],
 
         smartFeatures: [
-            "AI Product Recommendation Engine",
-            "Intent-Based Purchase Optimization",
-            "Automated Cart Recovery Workflow",
-            "Real-Time Conversion Intelligence Dashboard",
-            "Behavioral Customer Segmentation",
-            "Advanced Visitor Tracking System",
+            "Conversion-Focused UI/UX",
+            "Cart Recovery Workflow",
+            "Performance Optimization",
+            "Lead Capture Integration",
+            "Customer Analytics",
+            "Mobile Optimization",
         ],
 
         outcomes: [
-            "Increased Average Order Value",
-            "Reduced Cart Drop-Off Rate",
-            "Higher Visitor-to-Customer Conversion",
-            "Scalable Revenue Growth Visibility",
+            "Improved Online Sales",
+            "Higher Customer Conversion",
+            "Better Mobile Experience",
+            "Scalable Business Growth",
         ],
     },
 
     {
         id: "pkg-02",
-        category: "Commerce Infrastructure",
-        name: "EdTech Ecosystem Package",
+
+        category: "Web Development",
+
+        name: "EdTech Platform System",
+
         tagline:
-            "Scalable digital education infrastructure built for engagement and enrollment growth.",
+            "Professional education platforms designed for creators, institutes, and digital educators.",
+
         icon: "GraduationCap",
+
         price: "Starting from ₹50k",
-        badge: "Learning Funnel Ecosystem",
+
+        badge: "Education Platform",
+
         accent: "rgb(168, 85, 247)",
+
         gradient: "from-purple-500/10 via-transparent to-transparent",
 
         services: [
-            "Modern Course Platform Development",
-            "High-Converting Webinar Landing Pages",
-            "Professional Lecture Video Production",
-            "Educational Reels & Short Content",
-            "Premium Notes & PDF Design Systems",
-            "Interactive Student Dashboard Experience",
-            "Course Promotion Creative Assets",
-            "Educator Personal Branding Systems",
-            "Lead Capture & Enrollment Funnels",
-            "Content & Platform Support",
+            "Course Platform Development",
+            "Webinar Landing Pages",
+            "Lecture Video Editing",
+            "Educational Short Videos",
+            "Student Dashboard",
+            "PDF & Notes Design",
+            "Course Promotion Creatives",
+            "Lead Generation Funnels",
+            "Instructor Branding",
+            "Platform Support",
         ],
 
         smartFeatures: [
-            "Personalized Learning Journey Mapping",
-            "Student Skill Gap Intelligence",
-            "Learning Behavior Analytics System",
-            "AI-Powered Roadmap Recommendations",
-            "Automated Student Performance Insights",
-            "Predictive Progress Tracking",
+            "Student Progress Tracking",
+            "Learning Analytics",
+            "Course Funnel Optimization",
+            "Automated Enrollment Flow",
+            "Dashboard Insights",
+            "Student Retention Systems",
         ],
 
         outcomes: [
-            "Higher Student Enrollment Conversion",
-            "Improved Student Retention Rates",
-            "Automated Student Onboarding Experience",
-            "Optimized Learning Funnel Performance",
+            "Higher Course Sales",
+            "Better Student Retention",
+            "Improved User Experience",
+            "Scalable Education Brand",
         ],
     },
 
     {
         id: "pkg-03",
-        category: "Commerce Infrastructure",
-        name: "Real Estate Acquisition System",
+
+        category: "Web Development",
+
+        name: "Real Estate Growth System",
+
         tagline:
-            "Luxury-focused digital sales infrastructure for modern property businesses.",
+            "Modern real estate websites and marketing systems built for lead generation and property promotion.",
+
         icon: "Home",
+
         price: "Starting from ₹50k",
-        badge: "Lead Conversion Ecosystem",
+
+        badge: "Real Estate Infrastructure",
+
         accent: "rgb(16, 185, 129)",
+
         gradient: "from-emerald-500/10 via-transparent to-transparent",
 
         services: [
-            "Premium Property Listing Website",
-            "Conversion-Oriented Landing Pages",
-            "Cinematic Property Showcase Videos",
-            "Professional Drone Video Production",
-            "High-Engagement Promotional Reels",
-            "Smart WhatsApp Inquiry Integration",
-            "Interactive Brochure Design Systems",
-            "Lead Capture & Inquiry Funnels",
-            "Real Estate Social Media Creatives",
-            "Technical Website Management Support",
+            "Property Listing Website",
+            "Landing Page Systems",
+            "Property Showcase Videos",
+            "Drone Video Editing",
+            "Marketing Reels",
+            "WhatsApp Inquiry Setup",
+            "Brochure Design",
+            "Lead Generation Funnels",
+            "Social Media Creatives",
+            "Technical Maintenance",
         ],
 
         smartFeatures: [
-            "AI-Based Lead Qualification",
-            "Buyer Intent Tracking System",
-            "Smart Property Recommendation Engine",
-            "AI WhatsApp Sales Assistant",
-            "Automated Follow-Up Workflow",
-            "High-Intent Lead Detection Analytics",
+            "Lead Qualification Systems",
+            "Property Recommendation Flow",
+            "Inquiry Tracking",
+            "Automated Follow-Ups",
+            "Lead Analytics",
+            "CRM Integration",
         ],
 
         outcomes: [
-            "Faster Property Booking Cycles",
-            "Higher Quality Buyer Inquiries",
-            "Reduced Lead Response Time",
-            "Predictable Sales Pipeline Growth",
+            "Higher Quality Leads",
+            "Faster Lead Response",
+            "Improved Property Visibility",
+            "Consistent Sales Pipeline",
         ],
     },
 
     {
         id: "pkg-04",
-        category: "Creator Growth Systems",
-        name: "Podcast Authority Network",
+
+        category: "Content Production",
+
+        name: "Podcast Content System",
+
         tagline:
-            "Multi-platform content ecosystems designed to build audience trust and authority.",
+            "Professional podcast production and content repurposing systems for creators and brands.",
+
         icon: "Mic",
+
         price: "Starting from ₹30k",
-        badge: "Authority Growth System",
+
+        badge: "Podcast Production",
+
         accent: "rgb(219, 39, 119)",
+
         gradient: "from-pink-500/10 via-transparent to-transparent",
 
         services: [
-            "Multi-Camera Podcast Production",
-            "Professional Audio Enhancement",
-            "Short-Form Clips & Shorts Editing",
-            "Dynamic Subtitle & Caption Systems",
-            "High-CTR Thumbnail Design",
-            "Podcast Brand Identity Development",
-            "Multi-Platform Social Media Content",
-            "Spotify & YouTube Publishing Support",
-            "Podcast Landing Page Development",
-            "Audience Engagement Reels",
+            "Podcast Video Editing",
+            "Audio Enhancement",
+            "Short Clips Production",
+            "Subtitle & Captions",
+            "Thumbnail Design",
+            "Podcast Branding",
+            "Social Media Content",
+            "YouTube Publishing",
+            "Podcast Landing Page",
+            "Audience Clips",
         ],
 
         smartFeatures: [
-            "Predictive Content Performance Analytics",
-            "Audience Behavior Intelligence Engine",
-            "Smart Audience Notification Systems",
-            "Engagement Tracking Dashboard",
-            "Automated Content Repurposing Pipeline",
+            "Content Performance Tracking",
+            "Audience Analytics",
+            "Content Repurposing",
+            "Multi-Platform Distribution",
+            "Engagement Insights",
         ],
 
         outcomes: [
-            "Expanded Cross-Platform Audience Reach",
-            "Higher Listener Engagement Retention",
-            "Streamlined Content Distribution Workflow",
-            "Stronger Premium Brand Authority",
+            "Audience Growth",
+            "Higher Engagement",
+            "Consistent Content Workflow",
+            "Stronger Brand Authority",
         ],
     },
 
     {
         id: "pkg-05",
-        category: "Creator Growth Systems",
-        name: "Personal Brand Engine",
+
+        category: "Content Production",
+
+        name: "Personal Brand System",
+
         tagline:
-            "High-retention personal content systems engineered for creators and industry leaders.",
+            "High-retention content systems designed for creators, founders, and personal brands.",
+
         icon: "UserCheck",
+
         price: "Starting from ₹25k",
-        badge: "Organic Audience Growth",
+
+        badge: "Creator Growth",
+
         accent: "rgb(34, 197, 94)",
+
         gradient: "from-green-500/10 via-transparent to-transparent",
 
         services: [
-            "High-Retention Talking Head Editing",
-            "Dynamic Subtitle & Caption Design",
-            "Reels & Short-Form Video Production",
-            "Conversion-Focused Thumbnail Design",
-            "Premium Intro & Outro Sequences",
-            "Podcast Clip Repurposing",
-            "Strategic Personal Brand Positioning",
-            "Viral Hook Optimization Editing",
-            "Social Media Growth Creatives",
-            "Multi-Platform Content Repurposing",
+            "Talking Head Editing",
+            "Reels Editing",
+            "Caption Design",
+            "Thumbnail Design",
+            "Intro & Outro Design",
+            "Content Repurposing",
+            "Brand Positioning",
+            "Social Media Creatives",
+            "Growth Content Strategy",
+            "Multi-Platform Formatting",
         ],
 
         smartFeatures: [
-            "AI Viral Hook Optimization",
-            "Audience Retention Analytics",
-            "Cross-Platform Content Performance Tracking",
-            "Automated Lead Funnel Integration",
-            "Intelligent Inquiry Capture Systems",
+            "Audience Retention Tracking",
+            "Performance Analytics",
+            "Lead Funnel Integration",
+            "Growth Optimization",
+            "Content Insights",
         ],
 
         outcomes: [
-            "Accelerated Audience Growth",
-            "Enhanced Industry Authority Positioning",
-            "Consistent Inbound Lead Generation",
-            "Scalable Content Production Workflow",
+            "Faster Audience Growth",
+            "Stronger Online Presence",
+            "Consistent Lead Generation",
+            "Improved Brand Authority",
         ],
     },
 
     {
         id: "pkg-06",
-        category: "Brand Identity & Launch",
-        name: "Brand & Campaign Launch System",
+
+        category: "Brand & Growth",
+
+        name: "Brand Launch System",
+
         tagline:
-            "Premium brand identity and campaign infrastructure for modern businesses.",
+            "Complete branding and launch systems designed for modern businesses and startups.",
+
         icon: "Layers",
+
         price: "Starting from ₹45k",
-        badge: "Launch & Positioning Core",
+
+        badge: "Brand Identity",
+
         accent: "rgb(139, 92, 246)",
+
         gradient: "from-violet-500/10 via-transparent to-transparent",
 
         services: [
-            "Premium Logo Identity Design",
-            "Complete Visual Brand System",
-            "Social Media Branding Assets",
-            "Business Presentation & Pitch Deck Design",
-            "Corporate Brochure Design",
-            "Campaign Banner & Poster Creatives",
-            "High-Performance Thumbnail Design",
-            "Marketing Visual Asset Production",
-            "Comprehensive Brand Style Guidelines",
-            "Promotional Video Production",
+            "Logo Design",
+            "Brand Guidelines",
+            "Social Media Branding",
+            "Pitch Deck Design",
+            "Business Brochure Design",
+            "Campaign Creatives",
+            "Thumbnail Design",
+            "Marketing Assets",
+            "Brand Style System",
+            "Promotional Videos",
         ],
 
         smartFeatures: [
-            "Conversion Intelligence Analytics",
-            "Real-Time Campaign Performance Tracking",
-            "Advanced Business Insights Dashboard",
-            "Smart CRM Workflow Integration",
-            "Automated Marketing Operations",
+            "Marketing Insights",
+            "Campaign Analytics",
+            "CRM Integration",
+            "Growth Tracking",
+            "Marketing Automation",
         ],
 
         outcomes: [
-            "Powerful Market Launch Presence",
-            "Unified Cross-Platform Brand Identity",
-            "Increased Customer Trust & Credibility",
-            "High-Conversion Campaign Readiness",
+            "Professional Brand Presence",
+            "Stronger Brand Recognition",
+            "Improved Customer Trust",
+            "Launch-Ready Marketing",
         ],
     },
 ];
@@ -816,17 +862,24 @@ export default function IndependentMasonryGrid() {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
+
                 <div className="text-center mb-12 sm:mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-400 tracking-wider uppercase mb-4">
-                        <Sparkles className="w-3.5 h-3.5 text-cyan-400" />{" "}
-                        Premium Production Kits
+                        <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                        Premium Digital Packages
                     </div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white px-2">
-                        Our Architectural Frameworks
+
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white px-2 leading-tight">
+                        Scalable Digital Systems
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-slate-300 to-slate-500">
+                            For Modern Brands
+                        </span>
                     </h1>
-                    <p className="mt-3 text-xs sm:text-sm md:text-base text-slate-400 max-w-2xl mx-auto font-light px-4">
-                        Click on any tier package to inspect structural core
-                        blueprints, workflows, and production scopes.
+
+                    <p className="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto font-light px-4 leading-relaxed">
+                        Explore conversion-focused web development, content
+                        production, branding, and growth systems designed for
+                        long-term business growth.
                     </p>
                 </div>
 
@@ -933,7 +986,7 @@ export default function IndependentMasonryGrid() {
                                         <div>
                                             <h4 className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-3.5 flex items-center gap-2">
                                                 <Boxes className="w-3.5 h-3.5 text-slate-600" />{" "}
-                                                Core Scope Deliverables
+                                                Included Services
                                             </h4>
                                             <ul className="space-y-2.5">
                                                 {visibleServices.map(
@@ -957,7 +1010,7 @@ export default function IndependentMasonryGrid() {
                                         <div>
                                             <h4 className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-3.5 flex items-center gap-2">
                                                 <Zap className="w-3.5 h-3.5 text-amber-500/60" />{" "}
-                                                Smart System Logic
+                                                Growth Features
                                             </h4>
                                             <ul className="space-y-2">
                                                 {visibleSmartFeatures.map(
@@ -1008,8 +1061,7 @@ export default function IndependentMasonryGrid() {
                                                     className="pt-6 border-t border-slate-900"
                                                 >
                                                     <h4 className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-3">
-                                                        Targeted Performance
-                                                        Metrics
+                                                        Expected Outcomes
                                                     </h4>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {pkg.outcomes.map(
@@ -1039,12 +1091,12 @@ export default function IndependentMasonryGrid() {
                                         >
                                             {isExpanded ? (
                                                 <>
-                                                    Collapse Specification{" "}
+                                                    Collapse Details{" "}
                                                     <ChevronUp className="w-4 h-4 text-slate-500" />
                                                 </>
                                             ) : (
                                                 <>
-                                                    View Full Blueprint (
+                                                    View Full Package (
                                                     {pkg.services.length +
                                                         pkg.smartFeatures
                                                             .length}{" "}

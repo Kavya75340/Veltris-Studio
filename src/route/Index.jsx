@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../components/veltris/Nav";
 import Hero from "../components/veltris/Hero";
-import Stats from "../components/veltris/Stats";
+// import Stats from "../components/veltris/Stats";
 // import  Services  from "../components/veltris/Services";
 import Industries from "../components/veltris/Industries";
 import Work from "../components/veltris/Work";
@@ -16,7 +16,7 @@ export default function Index() {
         <main className="relative bg-background text-foreground">
             <Nav />
             <Hero />
-            <Stats />
+            {/* <Stats /> */}
             <StudioStructure />
             {/* <Services /> */}
             <Industries />

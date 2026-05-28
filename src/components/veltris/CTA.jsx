@@ -3,67 +3,94 @@ import { motion } from "framer-motion";
 
 export default function CTA() {
     return (
-        <section id="contact" className="relative py-32 overflow-hidden">
-            <div className="absolute inset-0 -z-10 bg-grid bg-grid-fade opacity-50" />
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-[var(--indigo)]/25 blur-[140px]" />
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[400px] w-[400px] rounded-full bg-[var(--cyan)]/20 blur-[120px]" />
+        <section
+            id="contact"
+            className="relative py-24 md:py-32 overflow-hidden bg-[#030712] text-white"
+        >
+            {/* Background Grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_45%,transparent_100%)] opacity-10 pointer-events-none" />
 
-            <div className="mx-auto max-w-4xl px-6 text-center">
-                {/* glow ring */}
+            {/* Ambient Glow */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[650px] w-[650px] rounded-full bg-cyan-500/10 blur-[150px]" />
+
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10 text-center">
+                {/* Premium Signal Orb */}
                 <div className="relative mx-auto mb-10 flex h-24 w-24 items-center justify-center">
-                    <span className="absolute inset-0 rounded-full border border-[var(--cyan)]/40" />
-                    <span className="absolute inset-2 rounded-full border border-[var(--cyan)]/30" />
-                    <span className="absolute inset-4 rounded-full border border-[var(--cyan)]/20" />
-                    <span className="absolute inset-0 rounded-full bg-[var(--cyan)]/30 blur-2xl animate-pulse-ring" />
-                    <span className="relative h-3 w-3 rounded-full bg-[var(--cyan)] shadow-[0_0_30px_var(--cyan)]" />
+                    <span className="absolute inset-0 rounded-full border border-cyan-400/30" />
+                    <span className="absolute inset-2 rounded-full border border-cyan-400/20" />
+                    <span className="absolute inset-4 rounded-full border border-cyan-400/10" />
+
+                    <span className="absolute inset-0 rounded-full bg-cyan-500/20 blur-2xl animate-pulse" />
+
+                    <span className="relative h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_30px_#22d3ee]" />
                 </div>
 
+                {/* Heading */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="text-balance text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] gradient-text"
+                    transition={{
+                        duration: 0.7,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]"
                 >
-                    Let's build something{" "}
-                    <span className="accent-text">exceptional.</span>
+                    Build a stronger{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400">
+                        digital presence.
+                    </span>
                 </motion.h2>
+
+                {/* Subtitle */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.15 }}
-                    className="mx-auto mt-6 max-w-xl text-[var(--color-telemetry)] text-lg"
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.15,
+                    }}
+                    className="mx-auto mt-6 max-w-2xl text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed"
                 >
-                    Partner with Veltris Studio to design, build and produce the
-                    next generation of your brand.
+                    We help modern brands build high-performing websites,
+                    scalable digital systems, and premium visual content focused
+                    on long-term growth.
                 </motion.p>
 
+                {/* CTA Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.25 }}
-                    className="mt-10 flex flex-wrap items-center justify-center gap-3"
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.25,
+                    }}
+                    className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
                     <a
                         href="mailto:hello@veltris.studio"
-                        className="group relative inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-[var(--background)] bg-white shadow-[0_0_60px_-10px_rgba(6,182,212,0.5)] hover:shadow-[0_0_80px_-8px_rgba(6,182,212,0.7)] transition-shadow"
+                        className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-slate-950 transition-all duration-300 shadow-[0_0_50px_-10px_rgba(6,182,212,0.4)] hover:shadow-[0_0_70px_-8px_rgba(6,182,212,0.6)] hover:-translate-y-0.5 w-full sm:w-auto"
                     >
                         Start a Project
-                        <span className="transition-transform group-hover:translate-x-0.5">
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
                             →
                         </span>
                     </a>
+
                     <a
                         href="#work"
-                        className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium glass"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-7 py-4 text-sm font-medium text-slate-200 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
                     >
-                        View Studio Work
+                        View Selected Work
                     </a>
                 </motion.div>
-                <div className="mt-8 font-mono text-[11px] text-[var(--color-comment)]">
-                    ↳ hello@veltris.studio · response within 24h
+
+                {/* Bottom Info */}
+                <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-950/50 px-4 py-2 text-[11px] font-mono tracking-wide text-slate-500">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Response time usually within 24 hours
                 </div>
             </div>
         </section>

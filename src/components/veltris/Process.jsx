@@ -92,16 +92,16 @@ export default function Process() {
 
             <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
                 <SectionHeader
-                    eyebrow="EXECUTION SYSTEM"
+                    eyebrow="OUR PROCESS"
                     title={
                         <>
-                            Structured execution.{" "}
+                            A streamlined process for{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600">
-                                Scalable systems.
+                                modern digital growth.
                             </span>
                         </>
                     }
-                    subtitle="A repeatable workflow engineered to ship premium outcomes — predictably."
+                    subtitle="From strategy to launch, every project follows a clear process focused on performance, design, and long-term scalability."
                 />
 
                 <div
@@ -263,7 +263,7 @@ export default function Process() {
                                         {/* Technical Base Stats */}
                                         <div className="mt-5 pt-3 border-t border-slate-900/80 flex items-center justify-between">
                                             <span className="font-mono text-[9px] tracking-widest text-slate-600 uppercase">
-                                                Active Pipeline
+                                                Project Phase
                                             </span>
                                             <div
                                                 className={`h-1.5 w-1.5 rounded-full bg-slate-800 transition-all duration-500 ${
