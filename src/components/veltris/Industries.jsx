@@ -547,151 +547,250 @@ const categories = [
 const packagesData = [
     {
         id: "pkg-01",
-
         category: "Commerce Infrastructure",
-
-        name: "Enterprise Commerce Engine",
-
+        name: "Enterprise E-Commerce Engine",
         tagline:
-            "Conversion-focused digital commerce ecosystems engineered for scalable online revenue.",
-
+            "High-conversion digital commerce ecosystems engineered for scalable growth.",
         icon: "ShoppingBag",
-
         price: "Starting from ₹60k",
-
-        badge: "Revenue Growth Infrastructure",
-
+        badge: "Revenue Acceleration System",
         accent: "rgb(6, 182, 212)",
-
         gradient: "from-cyan-500/10 via-transparent to-transparent",
 
         services: [
-            "E-Commerce Website Infrastructure",
+            "Conversion-Optimized E-Commerce Website",
             "Premium Product Experience Design",
-            "Product Showcase Video Production",
-            "High-CTR Commerce Reels",
-            "Strategic Brand Positioning",
-            "Campaign & Offer Creative Design",
-            "Multi-Platform Social Media Assets",
-            "Conversion Landing Page Systems",
-            "WhatsApp Commerce Integration",
-            "Technical Maintenance & Optimization",
+            "AI-Assisted Product Video Editing",
+            "High-CTR Product Showcase Reels",
+            "Strategic Brand Identity Development",
+            "Offer Banner & Campaign Creative Design",
+            "Multi-Platform Social Media Content",
+            "Sales-Focused Landing Page Systems",
+            "Smart WhatsApp Commerce Integration",
+            "Performance & Technical Maintenance Support",
         ],
 
         smartFeatures: [
             "AI Product Recommendation Engine",
-            "Behavior-Based Purchase Optimization",
-            "Automated Cart Recovery Systems",
-            "Real-Time Conversion Analytics",
+            "Intent-Based Purchase Optimization",
+            "Automated Cart Recovery Workflow",
+            "Real-Time Conversion Intelligence Dashboard",
             "Behavioral Customer Segmentation",
-            "Visitor Tracking Intelligence",
+            "Advanced Visitor Tracking System",
         ],
 
         outcomes: [
-            "Higher Average Order Value",
-            "Reduced Cart Abandonment",
-            "Improved Conversion Performance",
-            "Scalable Revenue Growth",
+            "Increased Average Order Value",
+            "Reduced Cart Drop-Off Rate",
+            "Higher Visitor-to-Customer Conversion",
+            "Scalable Revenue Growth Visibility",
         ],
     },
 
     {
         id: "pkg-02",
-
         category: "Commerce Infrastructure",
-
-        name: "EdTech Growth Ecosystem",
-
+        name: "EdTech Ecosystem Package",
         tagline:
-            "Modern digital learning infrastructure optimized for engagement, retention, and enrollment growth.",
-
+            "Scalable digital education infrastructure built for engagement and enrollment growth.",
         icon: "GraduationCap",
-
         price: "Starting from ₹50k",
-
-        badge: "Learning Funnel Infrastructure",
-
+        badge: "Learning Funnel Ecosystem",
         accent: "rgb(168, 85, 247)",
-
         gradient: "from-purple-500/10 via-transparent to-transparent",
 
         services: [
-            "Course Platform Development",
-            "Webinar Funnel Systems",
-            "Educational Video Production",
-            "Short-Form Educational Content",
-            "Premium Notes & PDF Systems",
-            "Interactive Student Dashboards",
-            "Course Promotion Creatives",
-            "Educator Brand Positioning",
-            "Enrollment Funnel Systems",
-            "Platform Support & Optimization",
+            "Modern Course Platform Development",
+            "High-Converting Webinar Landing Pages",
+            "Professional Lecture Video Production",
+            "Educational Reels & Short Content",
+            "Premium Notes & PDF Design Systems",
+            "Interactive Student Dashboard Experience",
+            "Course Promotion Creative Assets",
+            "Educator Personal Branding Systems",
+            "Lead Capture & Enrollment Funnels",
+            "Content & Platform Support",
         ],
 
         smartFeatures: [
-            "Personalized Learning Journeys",
-            "Student Skill Gap Analytics",
-            "Learning Behavior Intelligence",
-            "AI Roadmap Recommendations",
-            "Automated Student Insights",
+            "Personalized Learning Journey Mapping",
+            "Student Skill Gap Intelligence",
+            "Learning Behavior Analytics System",
+            "AI-Powered Roadmap Recommendations",
+            "Automated Student Performance Insights",
             "Predictive Progress Tracking",
         ],
 
         outcomes: [
-            "Higher Student Enrollment",
-            "Improved Learning Retention",
-            "Automated Student Onboarding",
-            "Optimized Learning Experience",
+            "Higher Student Enrollment Conversion",
+            "Improved Student Retention Rates",
+            "Automated Student Onboarding Experience",
+            "Optimized Learning Funnel Performance",
         ],
     },
 
     {
         id: "pkg-03",
-
         category: "Commerce Infrastructure",
-
-        name: "Real Estate Conversion System",
-
+        name: "Real Estate Acquisition System",
         tagline:
-            "Luxury-focused digital acquisition systems designed for modern real estate businesses.",
-
+            "Luxury-focused digital sales infrastructure for modern property businesses.",
         icon: "Home",
-
         price: "Starting from ₹50k",
-
-        badge: "Lead Conversion Infrastructure",
-
+        badge: "Lead Conversion Ecosystem",
         accent: "rgb(16, 185, 129)",
-
         gradient: "from-emerald-500/10 via-transparent to-transparent",
 
         services: [
-            "Property Listing Platforms",
+            "Premium Property Listing Website",
             "Conversion-Oriented Landing Pages",
-            "Cinematic Property Video Editing",
-            "Professional Drone Production",
-            "High-Engagement Property Reels",
-            "WhatsApp Inquiry Integration",
-            "Interactive Brochure Systems",
-            "Lead Capture Funnels",
-            "Real Estate Social Creatives",
-            "Website Management & Support",
+            "Cinematic Property Showcase Videos",
+            "Professional Drone Video Production",
+            "High-Engagement Promotional Reels",
+            "Smart WhatsApp Inquiry Integration",
+            "Interactive Brochure Design Systems",
+            "Lead Capture & Inquiry Funnels",
+            "Real Estate Social Media Creatives",
+            "Technical Website Management Support",
         ],
 
         smartFeatures: [
-            "AI Lead Qualification",
-            "Buyer Intent Intelligence",
-            "Smart Property Recommendations",
+            "AI-Based Lead Qualification",
+            "Buyer Intent Tracking System",
+            "Smart Property Recommendation Engine",
             "AI WhatsApp Sales Assistant",
-            "Automated Follow-Up Systems",
-            "High-Intent Lead Analytics",
+            "Automated Follow-Up Workflow",
+            "High-Intent Lead Detection Analytics",
         ],
 
         outcomes: [
-            "Faster Property Conversion Cycles",
-            "Higher Quality Buyer Leads",
+            "Faster Property Booking Cycles",
+            "Higher Quality Buyer Inquiries",
             "Reduced Lead Response Time",
             "Predictable Sales Pipeline Growth",
+        ],
+    },
+
+    {
+        id: "pkg-04",
+        category: "Creator Growth Systems",
+        name: "Podcast Authority Network",
+        tagline:
+            "Multi-platform content ecosystems designed to build audience trust and authority.",
+        icon: "Mic",
+        price: "Starting from ₹30k",
+        badge: "Authority Growth System",
+        accent: "rgb(219, 39, 119)",
+        gradient: "from-pink-500/10 via-transparent to-transparent",
+
+        services: [
+            "Multi-Camera Podcast Production",
+            "Professional Audio Enhancement",
+            "Short-Form Clips & Shorts Editing",
+            "Dynamic Subtitle & Caption Systems",
+            "High-CTR Thumbnail Design",
+            "Podcast Brand Identity Development",
+            "Multi-Platform Social Media Content",
+            "Spotify & YouTube Publishing Support",
+            "Podcast Landing Page Development",
+            "Audience Engagement Reels",
+        ],
+
+        smartFeatures: [
+            "Predictive Content Performance Analytics",
+            "Audience Behavior Intelligence Engine",
+            "Smart Audience Notification Systems",
+            "Engagement Tracking Dashboard",
+            "Automated Content Repurposing Pipeline",
+        ],
+
+        outcomes: [
+            "Expanded Cross-Platform Audience Reach",
+            "Higher Listener Engagement Retention",
+            "Streamlined Content Distribution Workflow",
+            "Stronger Premium Brand Authority",
+        ],
+    },
+
+    {
+        id: "pkg-05",
+        category: "Creator Growth Systems",
+        name: "Personal Brand Engine",
+        tagline:
+            "High-retention personal content systems engineered for creators and industry leaders.",
+        icon: "UserCheck",
+        price: "Starting from ₹25k",
+        badge: "Organic Audience Growth",
+        accent: "rgb(34, 197, 94)",
+        gradient: "from-green-500/10 via-transparent to-transparent",
+
+        services: [
+            "High-Retention Talking Head Editing",
+            "Dynamic Subtitle & Caption Design",
+            "Reels & Short-Form Video Production",
+            "Conversion-Focused Thumbnail Design",
+            "Premium Intro & Outro Sequences",
+            "Podcast Clip Repurposing",
+            "Strategic Personal Brand Positioning",
+            "Viral Hook Optimization Editing",
+            "Social Media Growth Creatives",
+            "Multi-Platform Content Repurposing",
+        ],
+
+        smartFeatures: [
+            "AI Viral Hook Optimization",
+            "Audience Retention Analytics",
+            "Cross-Platform Content Performance Tracking",
+            "Automated Lead Funnel Integration",
+            "Intelligent Inquiry Capture Systems",
+        ],
+
+        outcomes: [
+            "Accelerated Audience Growth",
+            "Enhanced Industry Authority Positioning",
+            "Consistent Inbound Lead Generation",
+            "Scalable Content Production Workflow",
+        ],
+    },
+
+    {
+        id: "pkg-06",
+        category: "Brand Identity & Launch",
+        name: "Brand & Campaign Launch System",
+        tagline:
+            "Premium brand identity and campaign infrastructure for modern businesses.",
+        icon: "Layers",
+        price: "Starting from ₹45k",
+        badge: "Launch & Positioning Core",
+        accent: "rgb(139, 92, 246)",
+        gradient: "from-violet-500/10 via-transparent to-transparent",
+
+        services: [
+            "Premium Logo Identity Design",
+            "Complete Visual Brand System",
+            "Social Media Branding Assets",
+            "Business Presentation & Pitch Deck Design",
+            "Corporate Brochure Design",
+            "Campaign Banner & Poster Creatives",
+            "High-Performance Thumbnail Design",
+            "Marketing Visual Asset Production",
+            "Comprehensive Brand Style Guidelines",
+            "Promotional Video Production",
+        ],
+
+        smartFeatures: [
+            "Conversion Intelligence Analytics",
+            "Real-Time Campaign Performance Tracking",
+            "Advanced Business Insights Dashboard",
+            "Smart CRM Workflow Integration",
+            "Automated Marketing Operations",
+        ],
+
+        outcomes: [
+            "Powerful Market Launch Presence",
+            "Unified Cross-Platform Brand Identity",
+            "Increased Customer Trust & Credibility",
+            "High-Conversion Campaign Readiness",
         ],
     },
 ];
