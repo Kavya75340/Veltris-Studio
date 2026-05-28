@@ -35,208 +35,206 @@ export default function Footer() {
                 {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-16">
                     {/* Brand Meta Block - Integrated with Premium Logo & Type */}
-                    <div className="lg:col-span-2 flex flex-col justify-between items-start space-y-6">
-                        <div className="flex flex-col items-start">
+                    <div className="lg:col-span-2 flex flex-col justify-between items-start gap-8 md:gap-10">
+                        {/* Brand Section */}
+                        <div className="flex flex-col items-start w-full">
                             <motion.a
                                 href="#"
-                                className="flex items-center gap-3 sm:gap-4 group relative select-none w-full sm:w-auto"
-                                whileHover={{ scale: 1.01 }}
-                                whileTap={{ scale: 0.99 }}
+                                className="
+                relative flex flex-col items-start
+                group select-none
+                w-full sm:w-auto
+            "
+                                whileHover={{ y: -1 }}
                                 transition={{
                                     type: "spring",
-                                    stiffness: 400,
-                                    damping: 25,
+                                    stiffness: 260,
+                                    damping: 18,
                                 }}
                             >
-                                {/* Logo Image Block */}
-                                <div className="flex flex-col justify-center flex-shrink-0 overflow-visible p-1">
+                                {/* Logo + Glow Wrapper */}
+                                <div className="relative flex items-center justify-center">
+                                    {/* Ambient Glow */}
+                                    <div
+                                        className="
+                        absolute inset-0
+                        rounded-full
+                        bg-cyan-400/15
+                        blur-2xl
+                        scale-75
+                        opacity-70
+                        transition-all duration-700
+                        group-hover:scale-100
+                        group-hover:opacity-100
+                    "
+                                    />
+
+                                    {/* Secondary Glow */}
+                                    <div
+                                        className="
+                        absolute inset-0
+                        bg-gradient-to-r
+                        from-cyan-400/10
+                        via-sky-400/10
+                        to-transparent
+                        blur-3xl
+                        opacity-60
+                    "
+                                    />
+
+                                    {/* Logo */}
                                     <motion.img
+                                        src="/logo1.png"
+                                        alt="Veltris Logo"
                                         initial={{
                                             opacity: 0,
-                                            scale: 0.8,
-                                            rotate: -5,
+                                            y: 8,
+                                            scale: 0.95,
                                         }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            scale: 1,
-                                            rotate: 0,
-                                        }}
-                                        viewport={{ once: true }}
-                                        transition={{
-                                            duration: 0.8,
-                                            ease: [0.16, 1, 0.3, 1],
-                                        }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
                                         whileHover={{
-                                            scale: 1.05,
-                                            rotate: 3,
-                                            filter: "drop-shadow(0 0 20px rgba(34, 211, 238, 0.45)) drop-shadow(0 0 40px rgba(34, 211, 238, 0.15))",
+                                            scale: 1.04,
+                                            y: -2,
                                         }}
-                                        src="/icon.png"
-                                        alt="Veltris Desktop Icon"
-                                        className="hidden md:block h-16 w-auto object-contain transition-all duration-300"
-                                    />
-                                    <motion.img
-                                        src="/logo2.png"
-                                        alt="Veltris Mobile Icon"
-                                        className="block md:hidden h-12 w-auto object-contain"
+                                        transition={{
+                                            duration: 0.5,
+                                            ease: "easeOut",
+                                        }}
+                                        className="
+                        relative z-10
+                        object-contain
+
+                        h-12
+                        sm:h-14
+                        md:h-16
+                        lg:h-[60px]
+                        xl:h-20
+
+                        w-auto
+
+                        transition-all duration-500
+                        drop-shadow-[0_0_12px_rgba(34,211,238,0.18)]
+                        group-hover:drop-shadow-[0_0_22px_rgba(34,211,238,0.35)]
+                    "
                                     />
                                 </div>
 
-                                {/* Premium Typography Block */}
-                                <div className="hidden md:flex flex-col justify-center leading-none min-w-0 select-none">
-                                    <div className="flex items-center">
-                                        <h1
-                                            className="
-                                                text-[18px] sm:text-xl 
-                                                font-black
-                                                uppercase
-                                                text-transparent
-                                                bg-clip-text
-                                                bg-gradient-to-r
-                                                from-white
-                                                via-slate-100
-                                                to-slate-300
-                                                drop-shadow-[0_0_18px_rgba(255,255,255,0.08)]
-                                                transition-all
-                                                duration-500
-                                                group-hover:from-white
-                                                group-hover:via-cyan-100
-                                                group-hover:to-cyan-400
-                                                flex overflow-hidden py-1
-                                            "
-                                            style={{
-                                                letterSpacing: "0.58em",
-                                                marginRight: "-0.58em",
-                                            }}
-                                        >
-                                            {"VELTRIS"
-                                                .split("")
-                                                .map((letter, index) => (
-                                                    <motion.span
-                                                        key={index}
-                                                        initial={{
-                                                            y: "100%",
-                                                            opacity: 0,
-                                                        }}
-                                                        whileInView={{
-                                                            y: 0,
-                                                            opacity: 1,
-                                                        }}
-                                                        viewport={{
-                                                            once: true,
-                                                        }}
-                                                        transition={{
-                                                            duration: 0.8,
-                                                            ease: [
-                                                                0.16, 1, 0.3, 1,
-                                                            ],
-                                                            delay: index * 0.04,
-                                                        }}
-                                                        className="inline-block"
-                                                    >
-                                                        {letter}
-                                                    </motion.span>
-                                                ))}
-                                        </h1>
-                                    </div>
+                                {/* Tagline */}
+                                <div
+                                    className="
+                    mt-2 sm:mt-3
+                    flex items-center gap-2
+                    flex-wrap
+                "
+                                >
+                                    <div className="h-[1px] w-5 bg-cyan-400/40" />
 
-                                    {/* Studios Line */}
-                                    <motion.div
-                                        initial={{ opacity: 0, scaleX: 0.6 }}
-                                        whileInView={{ opacity: 1, scaleX: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{
-                                            duration: 1,
-                                            ease: [0.16, 1, 0.3, 1],
-                                            delay: 0.3,
-                                        }}
-                                        className="flex items-center gap-1.5 mx-3 origin-center"
-                                    >
-                                        <motion.div
-                                            animate={{
-                                                opacity: [0.5, 1, 0.5],
-                                                scale: [1, 1.2, 1],
-                                            }}
-                                            transition={{
-                                                repeat: Infinity,
-                                                duration: 2,
-                                                ease: "easeInOut",
-                                            }}
-                                            className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
-                                        />
-                                        <div className="h-[1px] w-6 bg-gradient-to-r from-transparent to-cyan-400/50" />
-                                        <span
-                                            className="text-[7px] font-bold uppercase text-cyan-400 transition-all duration-300 group-hover:text-cyan-300 flex-shrink-0"
-                                            style={{
-                                                letterSpacing: "0.55em",
-                                                marginRight: "-0.55em",
-                                            }}
-                                        >
-                                            STUDIOS
-                                        </span>
-                                        <div className="h-[1px] w-6 bg-gradient-to-l from-transparent to-cyan-400/50" />
-                                        <motion.div
-                                            animate={{
-                                                opacity: [0.5, 1, 0.5],
-                                                scale: [1, 1.2, 1],
-                                            }}
-                                            transition={{
-                                                repeat: Infinity,
-                                                duration: 2,
-                                                ease: "easeInOut",
-                                                delay: 1,
-                                            }}
-                                            className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
-                                        />
-                                    </motion.div>
-
-                                    {/* Tagline - Smooth Fade Slide */}
-                                    <motion.span
-                                        initial={{ opacity: 0, y: 5 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{
-                                            duration: 0.6,
-                                            delay: 0.8,
-                                        }}
+                                    <span
                                         className="
-                hidden sm:block
-                mt-1.5
-                font-extrabold
-                text-[8px]
-                uppercase
-                tracking-[0.24em]
-                text-slate-500
-                group-hover:text-slate-400
-                transition-all
-                duration-300
-            "
+                        text-[8px]
+                        sm:text-[9px]
+                        md:text-[10px]
+
+                        uppercase
+                        tracking-[0.28em]
+
+                        text-cyan-100/70
+                        font-medium
+                        whitespace-nowrap
+                    "
                                     >
-                                        AI-POWERED EDITING & CREATIVE
-                                        ENGINEERING
-                                    </motion.span>
+                                        AI-Powered Editing & Creative
+                                        Engineering
+                                    </span>
                                 </div>
                             </motion.a>
 
-                            <p className="mt-6 max-w-sm text-sm text-white/60 leading-relaxed font-sans">
-                                A collaborative creative-tech studio building
-                                high-performance, scalable digital architectures
-                                for modern global brands.
+                            {/* Description */}
+                            <p
+                                className="
+                mt-5 md:mt-6
+                max-w-xs sm:max-w-sm md:max-w-md
+
+                text-[13px]
+                sm:text-sm
+                md:text-[15px]
+
+                leading-relaxed
+                text-white/55
+                font-light
+            "
+                            >
+                                A collaborative creative-tech studio crafting
+                                cinematic digital experiences, scalable systems,
+                                and high-performance brand architectures for
+                                modern global businesses.
                             </p>
                         </div>
 
-                        {/* Status Chip */}
-                        <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-md px-3.5 py-2 text-[11px] font-mono tracking-wide text-white/70 shadow-sm">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400 shadow-[0_0_8px_#22D3EE]" />
+                        {/* Status Capsule */}
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 240,
+                                damping: 18,
+                            }}
+                            className="
+            inline-flex items-center gap-3
+
+            rounded-full
+            border border-white/10
+            bg-white/[0.03]
+
+            backdrop-blur-xl
+
+            px-4 py-2.5
+
+            text-[10px]
+            sm:text-[11px]
+
+            font-mono
+            tracking-[0.18em]
+            uppercase
+
+            text-white/70
+
+            shadow-[0_0_30px_rgba(255,255,255,0.03)]
+        "
+                        >
+                            {/* Live Dot */}
+                            <span className="relative flex h-2.5 w-2.5">
+                                <span
+                                    className="
+                    absolute inline-flex h-full w-full
+                    rounded-full
+                    bg-cyan-400
+                    opacity-75
+                    animate-ping
+                "
+                                />
+
+                                <span
+                                    className="
+                    relative inline-flex
+                    h-2.5 w-2.5
+                    rounded-full
+                    bg-cyan-400
+                    shadow-[0_0_12px_#22D3EE]
+                "
+                                />
                             </span>
-                            <span>
-                                system · operational ·{" "}
-                                <span className="text-white font-semibold">
-                                    99.98% uptime
+
+                            <span className="flex items-center gap-2 flex-wrap">
+                                <span>System Operational</span>
+
+                                <span className="text-white/30">•</span>
+
+                                <span className="text-white font-semibold tracking-[0.15em]">
+                                    99.98% Uptime
                                 </span>
                             </span>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Navigation Link Columns */}

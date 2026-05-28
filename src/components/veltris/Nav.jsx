@@ -63,174 +63,54 @@ export default function Nav() {
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                     {/* Logo Image Block - Cleaned overflow to fix cut-off shadows */}
-                    <div className="flex flex-col justify-center flex-shrink-0 overflow-visible p-2">
-                        {/* Desktop Logo (/icon.png) - Premium Glow Effect */}
+                    <div className="relative flex items-center justify-center flex-shrink-0 p-1 sm:p-2 md:p-3 group">
+                        {/* Soft Glow */}
+                        <div
+                            className="
+            absolute inset-0
+            rounded-full
+            bg-cyan-400/15
+            blur-xl
+            scale-75
+            opacity-70
+            transition-all duration-500
+            group-hover:scale-100
+            group-hover:opacity-100
+        "
+                        />
+
+                        {/* Logo */}
                         <motion.img
-                            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            initial={{ opacity: 0, y: 8, scale: 0.92 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{
-                                duration: 0.8,
-                                ease: [0.16, 1, 0.3, 1],
-                                delay: 0.1,
+                                duration: 0.5,
+                                ease: "easeOut",
                             }}
                             whileHover={{
                                 scale: 1.05,
-                                rotate: 3,
-                                // Full wrap smooth balanced glow around the entire asset
-                                filter: "drop-shadow(0 0 20px rgba(34, 211, 238, 0.45)) drop-shadow(0 0 40px rgba(34, 211, 238, 0.15))",
+                                y: -1,
                             }}
-                            src="/icon.png"
-                            alt="Veltris Desktop Icon"
-                            className="hidden md:block h-20 w-auto object-contain transition-all duration-300 dynamic-glow"
-                        />
-
-                        {/* Mobile Logo (/logo2.png) - Compact Entry Effect */}
-                        <motion.img
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{
-                                duration: 0.6,
-                                ease: "easeOut",
-                            }}
-                            src="/logo2.png"
+                            src="/logo1.png"
                             alt="Veltris Mobile Icon"
-                            className="block md:hidden h-12 w-auto object-contain"
-                        />
-                    </div>
-
-                    {/* Premium Typography Block */}
-                    <div className="hidden md:flex flex-col justify-center leading-none group min-w-0 select-none">
-                        {/* Main Brand Name with Staggered Letter Animation */}
-                        <div className="flex items-center">
-                            <h1
-                                className="
-                    text-[22px] sm:text-2xl 
-                    font-black
-                    uppercase
-                    text-transparent
-                    bg-clip-text
-                    bg-gradient-to-r
-                    from-white
-                    via-slate-100
-                    to-slate-300
-                    drop-shadow-[0_0_18px_rgba(255,255,255,0.08)]
-                    transition-all
-                    duration-500
-                    group-hover:from-white
-                    group-hover:via-cyan-100
-                    group-hover:to-cyan-400
-                    flex overflow-hidden py-1
-                "
-                                style={{
-                                    letterSpacing: "0.58em",
-                                    marginRight: "-0.58em",
-                                }}
-                            >
-                                {"VELTRIS".split("").map((letter, index) => (
-                                    <motion.span
-                                        key={index}
-                                        initial={{ y: "100%", opacity: 0 }}
-                                        animate={{ y: 0, opacity: 1 }}
-                                        transition={{
-                                            duration: 0.8,
-                                            ease: [0.16, 1, 0.3, 1],
-                                            delay: index * 0.06,
-                                        }}
-                                        className="inline-block"
-                                    >
-                                        {letter}
-                                    </motion.span>
-                                ))}
-                            </h1>
-                        </div>
-
-                        {/* Studios Line with Scale & Fade Expansion */}
-                        <motion.div
-                            initial={{ opacity: 0, scaleX: 0.6 }}
-                            animate={{ opacity: 1, scaleX: 1 }}
-                            transition={{
-                                duration: 1,
-                                ease: [0.16, 1, 0.3, 1],
-                                delay: 0.5,
-                            }}
-                            className="flex items-center gap-1.5 mx-3 origin-center"
-                        >
-                            {/* Animated Glow Dot (Left) */}
-                            <motion.div
-                                animate={{
-                                    opacity: [0.5, 1, 0.5],
-                                    scale: [1, 1.2, 1],
-                                }}
-                                transition={{
-                                    repeat: Infinity,
-                                    duration: 2,
-                                    ease: "easeInOut",
-                                }}
-                                className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
-                            />
-
-                            {/* Left Line */}
-                            <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-cyan-400/50" />
-
-                            {/* STUDIOS Text */}
-                            <span
-                                className="
-                    text-[8px]
-                    font-bold
-                    uppercase
-                    text-cyan-400
-                    transition-all
-                    duration-300
-                    group-hover:text-cyan-300
-                    flex-shrink-0
-                "
-                                style={{
-                                    letterSpacing: "0.55em",
-                                    marginRight: "-0.55em",
-                                }}
-                            >
-                                STUDIOS
-                            </span>
-
-                            {/* Right Line */}
-                            <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-cyan-400/50" />
-
-                            {/* Animated Glow Dot (Right) */}
-                            <motion.div
-                                animate={{
-                                    opacity: [0.5, 1, 0.5],
-                                    scale: [1, 1.2, 1],
-                                }}
-                                transition={{
-                                    repeat: Infinity,
-                                    duration: 2,
-                                    ease: "easeInOut",
-                                    delay: 1,
-                                }}
-                                className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_8px_#22D3EE] flex-shrink-0"
-                            />
-                        </motion.div>
-
-                        {/* Tagline - Smooth Fade Slide */}
-                        <motion.span
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.8 }}
                             className="
-                hidden sm:block
-                mt-1.5
-                font-extrabold
-                text-[7px]
-                uppercase
-                tracking-[0.24em]
-                text-slate-500
-                group-hover:text-slate-400
-                transition-all
-                duration-300
-            "
-                        >
-                            AI-POWERED EDITING & CREATIVE ENGINEERING
-                        </motion.span>
+            relative z-10
+            object-contain
+
+            h-7
+            w-auto
+
+            xs:w-7
+            sm:h-8
+            md:h-12
+            lg:h-12
+            xl:h-14
+
+            transition-all duration-500
+            drop-shadow-[0_0_10px_rgba(34,211,238,0.25)]
+            group-hover:drop-shadow-[0_0_18px_rgba(34,211,238,0.45)]
+        "
+                        />
                     </div>
                 </motion.a>
 
